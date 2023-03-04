@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/styles/styles.css') }}">
+  </head>
+
+  <body>
+    {% block header %}
+      <header>
+        <ul class="header">
+          <li class="header-left"><a href="{{ url_for('index') }}">
+            <img src="{{ url_for('static', filename='/companylogo.svg') }}" alt="Identicon Store Company Logo">
+            </a></li>
+          <li class="header-fill">
+            <input type="search" class="header-search-input" name="search_query" placeholder="Search Identicons">
+            <input type="submit" value="Search">
+          </li>
+          <li class="header-right">
+            <span><a href="#" class="header-links">Account</a></span>
+            <span><a href="#" class="header-links">Cart</a></span>
+          </li>
+        </ul>
+      </header>
+    {% endblock %}
+
+    {% block navbar %}
+      <nav>
+        <ul class="navbar">
+          <li>
+            <a href="#">Blocks</a>
+          </li>
+          <li>
+            <a href="#">Layers</a>
+          </li>
+          <li>
+            <a href="#">Pixels</a>
+          </li>
+        </ul>
+      </nav>
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>
