@@ -8,6 +8,8 @@
   </head>
 
   <body>
+
+
     {% block header %}
       <header>
         <ul class="header">
@@ -19,12 +21,13 @@
             <input type="submit" value="Search">
           </li>
           <li class="header-right">
-            <span><a href="#" class="header-links">Account</a></span>
+            <span><a href="{{ url_for('login') }}" class="header-links">Account</a></span>
             <span><a href="#" class="header-links">Cart</a></span>
           </li>
         </ul>
       </header>
     {% endblock %}
+
 
     {% block navbar %}
       <nav>
@@ -41,6 +44,18 @@
         </ul>
       </nav>
     {% endblock %}
+
+    <hr>
+    {% with messages = get_flashed_messages () %}
+    {% if messages %}
+    <ul>
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
 
     {% block content %}
     {% endblock %}
