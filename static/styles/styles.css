@@ -17,12 +17,12 @@ body {
 input {
     font-family: inherit;
     font-size: inherit;
+    border: 2px solid var(--border-colour);
+    border-radius: 20px;   
 }
 
 input[type="submit"] {
-    border: 2px solid var(--border-colour);
     background-color: var(--primary-colour);
-    border-radius: 20px;
     color: white;
     padding: 2px 10px 2px 10px;
     margin-left: 0.5rem;
@@ -38,13 +38,11 @@ input[type="submit"]:hover {
   }
 
 input[type="search"] {
-    border: 2px solid var(--primary-colour);
-    border-radius: 20px;
     padding: .15em;
     flex: 1;
 }
 
-input[type="search"]:focus {
+input:focus {
     outline: 2px solid var(--secondary-colour);
 }
 
@@ -140,54 +138,8 @@ nav a:hover {
     color: var(--primary-colour) !important;
 }
 
-/*
-h1 {
-    color: red;
-}
-
-p, li {
-    color: green;
-}
-
-li {
-    list-style-type: none;
-}
-
-.special {
-    color: orange;
+/*--- ERRORS ---*/
+.error-msg {
+    color: lightcoral;
     font-weight: bold;
-}
-
-li em {
-    color: rebeccapurple;
-}
-
-h1 + p {
-    font-size: 200%;
-}
-
-p span {
-    color: red;
-}
-
-a:link {
-    color: black;
-}
-
-a:visited {
-    color: green;
-}
-
-a:focus {
-    color: fuchsia;
-}
-
-a:active {
-    color: greenyellow;
-}
-
-body h1 + p .special {
-    color: yellow;
-    background-color: black;
-    padding: 5px;
 }
