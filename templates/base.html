@@ -18,10 +18,14 @@
             </a></li>
           <li class="header-fill">
             <input type="search" class="header-search-input" name="search_query" placeholder="Search Identicons">
-            <input type="submit" value="Search">
+            <input type="image" alt="Search" src="{{ url_for('static', filename='/searchicon.svg') }}">
           </li>
           <li class="header-right">
-            <span><a href="{{ url_for('login') }}" class="header-links">Account</a></span>
+            {% if current_user.is_anonymous %}
+            <span><a href="{{ url_for('login') }}" class="header-links">Login</a></span>
+            {% else %}
+            <span><a href="{{ url_for('logout') }}" class="header-links">Logout</a></span>
+            {% endif %}
             <span><a href="#" class="header-links">Cart</a></span>
           </li>
         </ul>
