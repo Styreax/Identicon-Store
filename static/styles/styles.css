@@ -18,21 +18,21 @@ input {
     font-family: inherit;
     font-size: inherit;
     border: 2px solid var(--border-colour);
-    border-radius: 20px;   
+    border-radius: 20px;
 }
 
-input[type="submit"] {
-    background-color: var(--primary-colour);
+input[type="image"] {
+    border: 2px solid transparent;
+    padding: 0.1rem;
     color: white;
-    padding: 2px 10px 2px 10px;
-    margin-left: 0.5rem;
-    font-weight: bold;
     flex-shrink: 0;
-    font-weight: normal;
+    position: relative;
+    transform: translateX(-100%);
 }
 
-input[type="submit"]:hover {
+input[type="image"]:hover {
     border: 2px solid var(--border-colour);
+    position: relative;
     background-color: var(--secondary-colour);
     color: white;
   }
@@ -40,6 +40,7 @@ input[type="submit"]:hover {
 input[type="search"] {
     padding: .15em;
     flex: 1;
+    margin-left: 5%;
 }
 
 input:focus {
@@ -75,6 +76,7 @@ input:focus {
 
 .header-right span {
     padding: 10px;
+    transform: translateX(-20%);
 }
 
 .header-fill {
@@ -140,6 +142,6 @@ nav a:hover {
 
 /*--- ERRORS ---*/
 .error-msg {
-    color: lightcoral;
+    color: crimson;
     font-weight: bold;
 }
